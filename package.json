@@ -25,7 +25,7 @@
     "express": "^4.17.1",
     "mongoose": "^5.12.13",
     "pusher": "^5.0.0"
-  } ,
+  },
   "optionalDependencies": {
     "fsevents": "^2.3.2"
   }
