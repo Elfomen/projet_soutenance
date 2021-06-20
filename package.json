@@ -10,9 +10,9 @@
     "start": "node back-end/server.js",
     "client": "npm start --prefix front-end",
     "default": "node back-end/defaults/initialise.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\"" , 
-    "resetDataBase" : "node back-end/reset.js" , 
-    "heroku-postbuild" : "NPM_CONFIG_PRODUCTION=false npm install --prefix front-end && npm run build --prefix front-end"
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "resetDataBase": "node back-end/reset.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix front-end && npm run build --prefix front-end"
   },
   "keywords": [],
   "author": "",
