@@ -1,0 +1,5 @@
+database = projet_soutenance
+
+password= t8igL5WpHzlmeXl8
+
+connection string = mongodb+srv://projet_soutenance:t8igL5WpHzlmeXl8@cluster0.e0owv.mongodb.net/projet_soutenance?retryWrites=true&w=majority
