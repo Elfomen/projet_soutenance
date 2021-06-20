@@ -1,0 +1,82 @@
+.chatleft__main {
+  flex: 0.25;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatleft__nav {
+  display: flex;
+  border-right: 0.5px solid grey;
+  border-bottom: 0.5px solid grey;
+}
+
+.chatleft__nav > button,
+.chatleft__nav > div > button,
+.chatleft__search > button {
+  width: 50px;
+}
+
+.group_icon {
+  flex: 1;
+}
+
+.chatleft__search {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.chatleft__search > input {
+  flex: 0.8;
+  padding: 6px;
+  background-color: rgb(44, 44, 44);
+  border: none;
+  outline: 0;
+  border-radius: 5px;
+  color: #f4f4f4;
+}
+
+.chatleft__body {
+  cursor: pointer;
+  margin: 10px;
+  overflow-y: hidden;
+  flex: 1;
+}
+.chatleft__body:hover {
+  overflow-y: scroll;
+}
+
+.chatleft__body_group:hover {
+  background-color: #5d5d5d;
+}
+
+.chatleft__body_group {
+  display: flex;
+  align-items: center;
+  transition-timing-function: ease-in;
+  transition: all 0.2s;
+}
+.message_count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: rgb(118, 209, 118);
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.chatleft__body_group > p {
+  display: flex;
+  flex-direction: column;
+}
+
+.chatleft__body_group_avatar {
+  flex: 0.5;
+}
+
+.chatleft__body_group > div > button {
+  width: 50px;
+}

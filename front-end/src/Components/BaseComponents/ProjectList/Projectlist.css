@@ -1,0 +1,42 @@
+.projectlist {
+  display: flex;
+}
+
+.projectlist__project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.projectlist__add {
+  position: fixed;
+  margin-left: 70vw;
+  margin-top: 5vh;
+}
+.projectlist__add > a > button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  background-color: #171717;
+  color: #f4f4f4;
+  border-radius: 50%;
+  transition-timing-function: ease-in;
+  transition: all 0.4s;
+}
+
+.projectlist__add > a > button:hover {
+  background-color: #949292;
+  color: #171717;
+  transform: scale(1.5);
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader > p {
+  font-size: 25px;
+  font-weight: 800;
+}

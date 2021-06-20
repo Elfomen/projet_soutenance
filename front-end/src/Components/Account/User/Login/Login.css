@@ -1,0 +1,60 @@
+.userlogin {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.userlogin__form {
+  height: 60vh;
+  width: 40vw;
+  box-shadow: 0 0 8px black;
+  display: flex;
+  justify-content: center;
+}
+.userlogin__form > table {
+  width: 100%;
+}
+.userlogin__form > table > tbody > tr > td > input,
+button {
+  width: 94%;
+}
+
+.userlogin__form > table > tbody > tr > td > input {
+  padding: 10px;
+  border: none;
+  outline: 0;
+  font-size: 16px;
+}
+.userlogin__form > table > tbody > tr > td {
+  border-bottom: 0.4px solid rgba(0, 0, 0, 0.3);
+}
+.userlogin__form > table > tbody > tr > td > button,
+.userlogin__form > table > tbody > tr > a > td > button {
+  padding: 6px;
+  margin-top: 30px;
+  border: none;
+  background-color: #171717;
+  color: #f4f4f4;
+  border-radius: 6px;
+  transition-timing-function: ease-in;
+  transition: all 0.2s;
+  cursor: pointer;
+  width: 100%;
+}
+
+.userlogin__form > table > tbody > tr > td > button:hover,
+.userlogin__form > table > tbody > tr > a > td > button:hover {
+  background-color: #a09e9e;
+  color: #171717;
+}
+
+@media (max-width: 1200px) {
+  .userlogin__form {
+    width: 60vw;
+  }
+}
+@media (max-width: 600px) {
+  .userlogin__form {
+    width: 80vw;
+  }
+}

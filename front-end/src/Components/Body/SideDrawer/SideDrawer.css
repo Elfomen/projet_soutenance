@@ -1,0 +1,54 @@
+.sidedrawer {
+  height: 100vh;
+  position: fixed;
+  width: 35vw;
+  background-color: white;
+  z-index: 200;
+  background-color: #171717;
+  display: flex;
+  flex-direction: column;
+  border-radius: 3px;
+  transform: translateX(-100%);
+  transition: all 0.3s ease-out;
+}
+
+.sidedrawer.show {
+  transform: translateX(0);
+}
+
+.sidedrawer:hover {
+  width: 36vw;
+  overflow-y: scroll;
+}
+
+.sidedrawer__container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+  padding: 15px;
+  transition-timing-function: ease-in;
+  transition: all 0.3s;
+}
+.sidedrawer__container:hover {
+  background-color: green;
+}
+
+.sidedrawer__container_icon {
+  color: #9c9c9c;
+  margin-right: 2vw;
+}
+
+.sidedrawer__container > p {
+  text-decoration: none;
+  color: #9c9c9c;
+}
+
+@media (max-width: 700px) {
+  .sidedrawer {
+    width: 60vw;
+  }
+  .sidedrawer:hover {
+    width: 61vw;
+  }
+}

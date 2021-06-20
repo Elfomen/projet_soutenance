@@ -1,0 +1,23 @@
+.accountnavbar {
+  width: 100%;
+  background-color: #171717;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  position: fixed;
+}
+
+.accountnavbar__navigate_elements {
+  display: flex;
+  align-items: center;
+}
+
+.accountnavbar__navigate_elements > a {
+  text-decoration: none;
+  color: #f4f4f4;
+  margin-right: 20px;
+}
+
+.accountnavbar__navigate_elements > a:hover {
+  color: green;
+}

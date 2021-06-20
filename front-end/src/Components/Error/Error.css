@@ -1,0 +1,7 @@
+.error > p {
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f4f4f4;
+}

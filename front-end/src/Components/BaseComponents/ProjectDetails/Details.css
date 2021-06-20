@@ -1,0 +1,236 @@
+.projectdetails__operations {
+  display: flex;
+  background-color: #171717;
+  margin-left: 0.2vw;
+  border-radius: 4px;
+  padding: 40px;
+  transition-timing-function: ease-in;
+  height: 30vh;
+  transition: all 0.4s;
+  overflow-y: hidden;
+}
+.projectdetails__operations:hover {
+  overflow-y: scroll;
+}
+
+.projectdetails__operations > div > p,
+span {
+  color: #f4f4f4;
+}
+
+.projectdetails__participants {
+  display: flex;
+  flex: 0.4;
+  flex-direction: column;
+}
+.projectdetails__participants > p {
+  margin-bottom: 15px;
+  font-size: 22px;
+  text-decoration: underline;
+}
+
+.participants {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.projectdetails__participants > .participants > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  color: #f4f4f4;
+  background-color: green;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition-timing-function: ease-in;
+  transition: all 0.1s;
+}
+.projectdetails__participants > .participants > p:hover {
+  transform: scale(1.2);
+}
+
+.projectdetails__operation {
+  display: flex;
+  flex: 0.6;
+}
+
+.add_participants_container {
+  margin-right: 3vw;
+}
+
+.add_participants_container > p,
+.add_tasks_container > p {
+  color: #f4f4f4;
+  margin-bottom: 10px;
+}
+
+.add_participants_container > button,
+.add_tasks_container > button {
+  height: 35px;
+  width: 35px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #f4f4f4;
+  transition-timing-function: ease-in;
+  transition: all 0.2s;
+  margin-bottom: 250px;
+}
+
+.add_participants_container > button:hover,
+.add_tasks_container > button:hover {
+  transform: scale(1.3);
+}
+
+.add_participants_container > button {
+  background-color: green;
+}
+.add_tasks_container > button {
+  background-color: indianred;
+  margin-right: 10px;
+}
+
+.add_participant_form,
+.add_task_form {
+  background-color: #f4f4f4;
+  height: 37vh;
+  margin-right: 20px;
+  width: 70%;
+  display: none;
+}
+
+.add_participant_form > table,
+.add_task_form > table {
+  width: 100%;
+}
+.add_participant_form > table > tbody > tr > td,
+.add_task_form > table > tbody > tr > td {
+  border-bottom: 0.3px solid rgba(0, 0, 0, 0.4);
+}
+.add_participant_form > table > tbody > tr > td > input,
+.add_task_form > table > tbody > tr > td > input {
+  background-color: transparent;
+  border: none;
+  outline: 0;
+  padding: 10px;
+  width: 98%;
+}
+.add_participant_form > table > tbody > tr > td > select,
+.add_task_form > table > tbody > tr > td > select {
+  width: 98%;
+  padding: 5px;
+}
+
+.add_task_form > table > tbody > tr > .dont_show {
+  border: none;
+}
+.add_task_form > table > tbody > tr > td > p {
+  font-weight: bolder;
+}
+.add_task_form > table > tbody > tr > td > button,
+.add_participant_form > table > tbody > tr > td > button {
+  width: 98%;
+  border: none;
+  background-color: #171717;
+  color: #f4f4f4;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 13px;
+  transition-timing-function: ease-in;
+  transition: all 0.3s;
+}
+.add_task_form > table > tbody > tr > td > button:hover,
+.add_participant_form > table > tbody > tr > td > button:hover {
+  background-color: #adadad;
+  color: #171717;
+}
+
+.projectdetails_description > p {
+  color: #f4f4f4;
+}
+
+.projectdetails__details > table {
+  width: 98%;
+  margin-bottom: 30px;
+}
+.projectdetails__details > table > tbody > tr > td {
+  padding: 11px;
+  border-bottom: 0.4px solid rgba(0, 0, 0, 0.3);
+}
+
+tr:hover {
+  border-left: 4px solid black;
+}
+
+.error {
+  padding: 10px;
+  background-color: rgb(134, 0, 0);
+  color: #f4f4f4;
+  border-radius: 3px;
+  font-size: 19px;
+  text-align: center;
+}
+
+.worker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  color: #f4f4f4;
+  transition-timing-function: ease-in;
+  transition: all 0.4s;
+  cursor: pointer;
+  border: none;
+}
+
+.worker:hover {
+  transform: scale(1.22);
+}
+.prio {
+  color: #f4f4f4;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.status {
+  text-align: center;
+  color: #f4f4f4;
+  font-weight: bolder;
+}
+
+.progress_change {
+  background-color: #171717;
+}
+
+.loading_participant {
+  background-color: #f4f4f4;
+}
+
+.loader_participants {
+  display: flex;
+  align-items: center;
+}
+
+.loader_participants > p {
+  color: #f4f4f4;
+}
+
+@media (max-width: 1160px) {
+  .projectdetails__operation {
+  }
+  .add_participant_form {
+    width: 100%;
+  }
+}

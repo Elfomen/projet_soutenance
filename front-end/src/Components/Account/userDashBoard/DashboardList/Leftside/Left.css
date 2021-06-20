@@ -1,0 +1,37 @@
+.dashboard__leftside {
+  background-color: #171717;
+  height: 100vh;
+  position: fixed;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 3px;
+  margin-top: 8vh;
+}
+.dashboard__leftside:hover {
+  width: 15.87%;
+  overflow-y: scroll;
+}
+
+.dashboard__leftside__container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+  padding: 15px;
+  transition-timing-function: ease-in;
+  transition: all 0.3s;
+}
+.dashboard__leftside__container:hover {
+  background-color: green;
+}
+
+.dashboard__leftside__container_icon {
+  color: #9c9c9c;
+  margin-right: 2vw;
+}
+
+.dashboard__leftside__container > p {
+  text-decoration: none;
+  color: #9c9c9c;
+}

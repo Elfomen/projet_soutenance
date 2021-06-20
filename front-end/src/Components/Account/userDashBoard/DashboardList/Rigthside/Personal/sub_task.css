@@ -1,0 +1,7 @@
+.finishedtask {
+  background-color: #0052cc;
+}
+
+.finishedtask > p {
+  color: #f4f4f4;
+}

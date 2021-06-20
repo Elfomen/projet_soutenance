@@ -1,0 +1,8 @@
+.userrigthside {
+  margin-top: 8vh;
+  position: fixed;
+  height: 90vh;
+  overflow-y: scroll;
+  width: 85%;
+  margin-left: 15%;
+}

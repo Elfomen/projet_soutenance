@@ -1,0 +1,112 @@
+.project_create {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project_create__form {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+  box-shadow: 0 0 12px black;
+}
+
+.project_create__form > table {
+  width: 100%;
+  text-align: center;
+}
+
+.project_create__form > table > tbody > tr > td > input {
+  background-color: transparent;
+  border: none;
+  width: 92%;
+  outline: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.project_create__form > table > tbody > tr > td > textarea {
+  background-color: transparent;
+  border: none;
+  width: 92%;
+  outline: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 11vh;
+}
+
+.project_create__form > table > tbody > tr > td {
+  border-bottom: 0.5px solid grey;
+}
+
+.project_create__form > table > tbody > tr > .project_exception {
+  border: none;
+}
+
+.project_create__form > table > tbody > tr > td > button {
+  width: 98%;
+  padding: 8px;
+  border: none;
+  background-color: #3d3d3d;
+  color: #f4f4f4;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition-timing-function: ease-in;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.project_create__form > table > tbody > tr > td > button:hover {
+  background-color: #181818;
+}
+
+.project_create__form > table > tbody > tr > td > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.project_create__form > table > tbody > tr > td > div > select {
+  padding: 8px;
+  width: 80%;
+  flex: 1;
+}
+.project_create__form > table > tbody > tr > td > div > p {
+  margin-right: 20px;
+  font-weight: bolder;
+}
+.project_create__form > table > tbody > tr > .project_cancel_btn > button {
+  background-color: red;
+}
+.project_create__form
+  > table
+  > tbody
+  > tr
+  > .project_cancel_btn
+  > button:hover {
+  background-color: rgb(92, 1, 1);
+}
+
+@media (max-width: 800px) {
+  .project_create__form {
+    width: 70%;
+  }
+}
+
+@media (max-width: 600px) {
+  .project_create__form {
+    width: 90%;
+  }
+}
+
+@media (max-width: 350px) {
+  .project_create__form {
+    width: 100%;
+  }
+}

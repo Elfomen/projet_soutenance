@@ -1,0 +1,24 @@
+.percentage {
+  background: linear-gradient(to right, #7aacf8, #00388d);
+  padding: 4px;
+  border-radius: 30px;
+  transition-timing-function: ease-in;
+  transition: all 1.2s;
+  box-shadow: 0 0 25px #00388d;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.percentage > p {
+  margin-left: 50%;
+}
+
+.percentage > p > label > .ok {
+  color: #002761;
+  font-size: 13px;
+}
+.percentage > p {
+  display: flex;
+  align-items: center;
+}

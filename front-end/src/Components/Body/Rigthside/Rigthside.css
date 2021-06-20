@@ -1,0 +1,15 @@
+.rigthside {
+  margin-top: 8vh;
+  position: fixed;
+  height: 90vh;
+  overflow-y: scroll;
+  width: 85%;
+}
+
+@media (max-width: 1160px) {
+  .rigthside {
+    width: 100vw;
+    position: relative;
+    margin-left: 20px;
+  }
+}

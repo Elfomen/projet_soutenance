@@ -1,0 +1,120 @@
+.project {
+  display: flex;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+  margin-bottom: 8vh;
+}
+
+.project__container_image > img {
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  margin-right: 2.5vw;
+}
+
+.project__container_description {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+.project__container_description > p {
+  color: rgb(0, 77, 0);
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+.project__container_description > button {
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background-color: #171717;
+  color: #f4f4f4;
+  cursor: pointer;
+  transition-timing-function: ease-in;
+  transition: all 0.4s;
+}
+.project__container_description > button:hover {
+  background-color: #929191;
+  color: #171717;
+}
+.project__container_description > p > span {
+  color: #171717;
+}
+.add {
+  background-color: green;
+}
+.add:hover {
+  background-color: rgb(0, 36, 0);
+  transform: scale(1.23);
+}
+.remove {
+  background-color: red;
+}
+.remove:hover {
+  background-color: rgb(105, 0, 0);
+  transform: scale(1.23);
+}
+.update {
+  background-color: #171717;
+}
+.update:hover {
+  background-color: #9e9e9e;
+  color: #171717;
+  transform: scale(1.23);
+}
+.view {
+  background-color: green;
+}
+.view:hover {
+  background-color: rgb(0, 36, 0);
+  transform: scale(1.23);
+}
+.project__operations {
+  margin-left: 13vw;
+  flex: 1;
+}
+
+.project__operations > a > button {
+  height: 36px;
+  width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  color: #f4f4f4;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition-timing-function: ease-in;
+  transition: all 0.4s;
+}
+
+@media (max-width: 1130px) {
+  .project__container_image > img {
+    height: 150px;
+    width: 150px;
+  }
+
+  .project__container_description > p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 760px) {
+  .project__container_description > button {
+    display: none;
+  }
+  .project {
+    flex-direction: column;
+  }
+
+  .project__operations {
+    display: flex;
+    margin-top: 20px;
+  }
+  .project__operations > a {
+    margin-right: 5vw;
+  }
+  .project__container_description {
+    width: 84%;
+  }
+}

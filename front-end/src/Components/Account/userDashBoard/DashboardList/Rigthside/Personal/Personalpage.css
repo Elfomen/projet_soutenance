@@ -1,0 +1,284 @@
+.personalprojectpage {
+  display: grid;
+  place-items: center;
+}
+
+.personalprojectpage_info {
+  height: 100vh;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.personalprojectpage_info_header {
+  width: 100%;
+  padding: 10px;
+  background-color: #171717;
+  position: fixed;
+  height: 30vh;
+  z-index: 100;
+  display: flex;
+  overflow-y: scroll;
+}
+
+.personalprojectpage_info_header_details {
+  width: 60%;
+  height: 30vh;
+}
+.personalprojectpage_info_header_details:hover {
+}
+.personalprojectpage_info_header_details > h1 {
+  color: wheat;
+  text-decoration: underline;
+  padding: 20px 0;
+}
+
+.percentage_project_progress {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  width: 100%;
+}
+.personalprojectpage_info_body {
+  margin-top: 32vh;
+}
+
+.percentage_project_progress > h2 {
+  color: #f4f4f4;
+  margin-right: 0px;
+  width: 25%;
+}
+
+.personalprojectpage_info_body {
+  display: flex;
+}
+.personalprojectpage_info_body_left {
+  display: flex;
+  flex-direction: column;
+  flex: 0.3;
+  box-shadow: 0 0 8px rgb(41, 41, 41);
+  margin: 20px 5px;
+  height: 90vh;
+  cursor: pointer;
+  transition-timing-function: ease-in;
+  border-radius: 8px;
+  transition: all 0.3s;
+  overflow-y: hidden;
+}
+.personalprojectpage_info_body_left:hover {
+  overflow-y: scroll;
+}
+
+.personalprojectpage_info_body_left > p {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  font-weight: 800;
+}
+
+.percentage_project_progress > table {
+  width: 80%;
+}
+.progress {
+  width: 50%;
+}
+
+.personalprojectpage_info_body_left > h1 {
+  text-decoration: underline;
+  margin-bottom: 3vh;
+}
+.personalprojectpage_info_body_left > h2 {
+  margin-bottom: 2vh;
+}
+
+.personalprojectpage_info_body_left:hover {
+  transform: scale(1.03);
+  background-color: #171717;
+  z-index: 200;
+}
+.personalprojectpage_info_body_left:hover > label,
+.personalprojectpage_info_body_left:hover h1,
+.personalprojectpage_info_body_left:hover h2,
+.personalprojectpage_info_body_left:hover p {
+  color: #f4f4f4;
+}
+
+.personalprojectpage_info_body_left > label {
+  font-size: 18px;
+  padding: 5px;
+}
+
+.personalprojectpage_info_body_rigth {
+  flex: 0.7;
+}
+
+.personalprojectpage_info_body_rigth {
+  margin: 20px;
+}
+
+.personalprojectpage_info_body_rigth_details {
+  margin-bottom: 30px;
+}
+
+.personalprojectpage_info_body_rigth_details > table {
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.personalprojectpage_info_body_rigth_details > table > tbody > tr > td {
+  padding: 10px;
+  border: 1px solid grey;
+}
+
+.personalprojectpage_info_body_rigth_subtasks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.personalprojectpage_info_body_rigth_subtasks_container {
+  width: 30%;
+  height: 35vh;
+  margin: 10px;
+  box-shadow: 0 0 6px black;
+  transition-timing-function: ease-in;
+  transition: all 0.3s;
+  cursor: pointer;
+  overflow-y: hidden;
+  background-color: #0052cc;
+}
+.personalprojectpage_info_body_rigth_subtasks_container:hover {
+  overflow-y: scroll;
+}
+
+.personalprojectpage_info_body_rigth_subtasks_container > div > h3 {
+  text-align: center;
+  background-color: #171717;
+  color: #f4f4f4;
+}
+
+.finishedtask {
+  display: flex;
+  align-items: center;
+}
+.finishedtask > p {
+  flex: 0.7;
+}
+
+.newsubtask > div {
+  display: flex;
+  align-items: center;
+}
+
+.newsubtask > div > input {
+  border: none;
+  outline: 0;
+  border-bottom: 1px solid grey;
+}
+
+.newsubtask > div > p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: #171717;
+  color: #f4f4f4;
+  transition-timing-function: ease-in;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.newsubtask > div > p:hover {
+  transform: scale(1.15);
+}
+
+.finishedtask {
+  padding: 10px;
+}
+
+.bar {
+  background-color: #171717;
+}
+
+.chatgroup > h1 {
+  color: #f4f4f4;
+}
+
+.chatgroup > .chatgroup__details > p {
+  color: #f4f4f4;
+  padding: 5px;
+}
+
+.chatgroup > .chatgroup__details > a {
+  text-decoration: none;
+  padding: 6px;
+  font-size: 18px;
+  color: #171717;
+  background-color: #f4f4f4;
+  margin: 6px;
+  border-radius: 4px;
+  transition-timing-function: ease-in;
+  transition: all 0.3s;
+}
+
+.chatgroup > .chatgroup__details > a:hover {
+  color: #f4f4f4;
+  background-color: #585757;
+}
+.progress {
+  width: 80%;
+}
+
+.percentage_project_progress > h2 {
+  width: 70%;
+}
+
+.description_at_top {
+  margin-top: 5vh;
+  display: none;
+}
+
+.description_at_top > h1,
+.description_at_top h2,
+.description_at_top label,
+.description_at_top p {
+  color: #f4f4f4;
+}
+
+@media (max-width: 950px) {
+  .personalprojectpage_info_header {
+    flex-direction: column;
+  }
+  .personalprojectpage_info_header_details {
+    width: 100%;
+  }
+  .progress {
+    width: 100%;
+  }
+
+  .percentage_project_progress > h2 {
+    width: 100%;
+  }
+
+  .description_at_top {
+    display: block;
+  }
+
+  .personalprojectpage_info_body_left {
+    display: none;
+  }
+  .personalprojectpage_info_body_rigth {
+    flex: 1;
+  }
+}
+
+@media (max-width: 1000px) {
+  .personalprojectpage_info_body_rigth_subtasks_container {
+    width: 45%;
+  }
+}
+@media (max-width: 600px) {
+  .personalprojectpage_info_body_rigth_subtasks_container {
+    width: 95%;
+  }
+}
