@@ -1,10 +1,10 @@
 import mongoose from 'mongoose'
 
-const URI = "mongodb+srv://projet_soutenance:t8igL5WpHzlmeXl8@cluster0.e0owv.mongodb.net/projet_soutenance?retryWrites=true&w=majority"
+const MONGO_URI = process.env.MONGO_URI || "mongodb+srv://projet_soutenance:t8igL5WpHzlmeXl8@cluster0.e0owv.mongodb.net/projet_soutenance?retryWrites=true&w=majority"
 
 const connect = async () => {
     try {
-        await mongoose.connect(URI , {
+        await mongoose.connect(MONGO_URI , {
             useNewUrlParser : true , 
             useUnifiedTopology : true , 
             useCreateIndex : true 
