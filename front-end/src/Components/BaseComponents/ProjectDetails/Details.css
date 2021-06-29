@@ -49,6 +49,7 @@ span {
   transition-timing-function: ease-in;
   transition: all 0.1s;
 }
+
 .projectdetails__participants > .participants > p:hover {
   transform: scale(1.2);
 }
@@ -225,6 +226,24 @@ tr:hover {
 
 .loader_participants > p {
   color: #f4f4f4;
+}
+
+.task_worker{
+  display: flex;
+  align-items: center;
+}
+
+.delete_worker{
+  color:  #ff3333;
+  cursor: pointer;
+  flex: 1;
+  transition-timing-function: ease-in;
+  transition: all 0.3s;
+}
+
+.delete_worker:hover{
+  color: red;
+  transform: scale(1.2);
 }
 
 @media (max-width: 1160px) {

@@ -48,7 +48,6 @@ const projectControllers = {
     createNewtask : async(req , res) => {
         try {
             const project = await Project.findById(req.body.project)
-            console.log(project)
             const existingTasks = project.tasks
 
             await Project.findByIdAndUpdate(req.body.project , {
@@ -64,6 +63,22 @@ const projectControllers = {
             console.log(error.message)
         }
     } , 
+
+    deleteTaskFromUser : async (req , res) => {
+        try {
+            const project = await Project.findById(req.body.project)
+            const newTasks = project.tasks.filter(task => (
+                task._id!=req.body.task
+            ))
+            await Project.findByIdAndUpdate(req.body.project , {
+                tasks : newTasks
+            })
+            res.status(200).send("ok")
+        } catch (error) {
+            res.send("error")
+            console.log(error.message)
+        }
+    } ,
 
     createNewSubTask : async(req , res) => {
         try {

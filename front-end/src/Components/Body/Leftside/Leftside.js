@@ -6,6 +6,7 @@ import LanguageIcon from '@material-ui/icons/Language';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import HomeIcon from '@material-ui/icons/Home';
 import { Link } from 'react-router-dom'
+import SpeakerNotesIcon from '@material-ui/icons/SpeakerNotes';
 import { useHistory } from 'react-router-dom'
 function Leftside() {
 
@@ -35,12 +36,12 @@ function Leftside() {
                 <p>New Project</p>
                 
             </Link>
-            <Link className="leftside__container">
-                    <LanguageIcon className="leftside__container_icon"/>
+            <a href={`/chatgroup/${localStorage.getItem("running_project")}`} className="leftside__container">
+                    <SpeakerNotesIcon className="leftside__container_icon"/>
                 
-                <p>Our webside</p>
+                <p>Chat group</p>
                 
-            </Link>
+            </a>
             <Link className="leftside__container" onClick={loggout}>
                 <ExitToAppIcon className="leftside__container_icon"/>
                 

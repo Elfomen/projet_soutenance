@@ -87,6 +87,40 @@ export const createNewTask = (project , task , userId) => async(dispatch) => {
     }
 }
 
+export const deleteUserFromTask = (project , task) => async(dispatch) => {
+    try {
+        dispatch({
+            type : ProjectConstants.REMOVE_TASK_LOADING
+        })
+
+        const deleted = await axios.put("/project/tasks/remove" , {
+            project : project , 
+            task : task
+        })
+
+        if(deleted.data==="ok"){
+            dispatch({
+                type : ProjectConstants.REMOVE_TASK_SUCCESS , 
+                payload : {
+                    project ,
+                    task
+                }
+            })
+        }else{
+            dispatch({
+                type : ProjectConstants.REMOVE_TASK_ERROR , 
+                payload : "Cant register task"
+            })
+        }
+
+    } catch (error) {
+        dispatch({
+            type : ProjectConstants.REMOVE_TASK_ERROR , 
+            payload : error.message
+        })
+    }
+}
+
 export const createNewSubtask = (project , task , sub_tasks) => async(dispatch) => {
     try {
         dispatch({
