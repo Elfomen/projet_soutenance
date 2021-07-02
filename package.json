@@ -12,7 +12,7 @@
     "default": "node back-end/defaults/initialise.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "resetDataBase": "node back-end/reset.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix front-end && npm run build --prefix front-end"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix front-end && npm run build --prefix front-end && npm run start"
   },
   "keywords": [],
   "author": "",
