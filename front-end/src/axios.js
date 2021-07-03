@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const event = axios.create({
-    baseURL : "http://localhost:5000"
+    baseURL : "https://frozen-wave-37700.herokuapp.com"
 })
 
 export default event
