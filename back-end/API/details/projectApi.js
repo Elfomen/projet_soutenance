@@ -16,5 +16,6 @@ router.put("/project/tasks/subtasks/new" , ProjectControllers.createNewSubTask)
 router.put("/project/tasks/sub_tasks/completed" , ProjectControllers.completeSubtask)
 
 router.put("/project/messages/new" , ProjectControllers.addNewMessage)
+router.put("/project/tasks/remove" , ProjectControllers.deleteTaskFromUser)
 
 export default router

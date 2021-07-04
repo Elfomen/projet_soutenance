@@ -6,11 +6,13 @@ import { useHistory } from 'react-router-dom'
 import { useDispatch , useSelector } from 'react-redux'
 import { getAllUsers , addUserToProject } from '../../redux/actions/usersActions'
 import {createNewTask} from '../../redux/actions/Projectactions'
-import { getProjectsFromAdmin } from '../../redux/actions/Projectactions'
+import { getProjectsFromAdmin , deleteUserFromTask } from '../../redux/actions/Projectactions'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import { makeStyles } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import { CircleLoader } from 'react-spinners'
+import HighlightOffIcon from '@material-ui/icons/HighlightOff';
+import { IconButton } from '@material-ui/core';
 function Details({id}) {
 
     const [showForm , setShowForm] = useState({
@@ -163,6 +165,13 @@ function Details({id}) {
         }
     }
 
+
+    // this function will remove a task from a participant
+
+    const removetask = (project ,task) => {
+       dispatch(deleteUserFromTask(project , task))
+    }
+
     return (
         <div className="projectdetails">
             {errorMessage && <h1 className="error">{errorMessage}</h1>}
@@ -174,16 +183,17 @@ function Details({id}) {
                         {
                             user_loading ? <div className="loader_participants"><CircularProgress color="secondary"/> <p>Loading participants...</p></div>:
                             user_error ? setErrorMessage(error) : expectedUsers.length&&expectedUsers.map(user => (
-                                <p>{user.name[0]}{user.name[1]}</p>
+                                    <p>
+                                        {user.name[0]}{user.name[1]}
+                                    </p>   
+                                
                             ))
                         }
                     </div>
                     <div className="participants">
                         
                     </div>
-                    <div className="projectdetails_description">
-                        <p>{expectedProject.length&&expectedProject[0].description}</p>
-                    </div>
+                    
                 </div>
                 <div className="projectdetails__operation">
                     <div className="add_participants_container">
@@ -316,12 +326,14 @@ function Details({id}) {
                                     <tr>
                                         <td>{task.name}</td>
                                         <td>
-                                            {
-                                                expectedUsers.map(user => (
+                                            <div className="task_worker">{
+                                                    expectedUsers.map(user => (
                                                     user._id===task.worker && user.name&& <p
                                                     style={{backgroundColor : userColors[Math.floor(Math.random() * 9) + 1]}} className="worker">{user.name[0]}{user.name[1]}</p>
-                                                ))
-                                            }
+                                                ))}
+                                                <HighlightOffIcon className="delete_worker" onClick={() => removetask(project._id , task._id)}/>
+                                            </div>
+                                                
                                         </td>
                                         <td style={{backgroundColor : task.priority==="HIGH" ?
                                         "#004d00" : task.priority==="MEDIUM" ? '#0099e6' : '#990000'}}><p className="prio">{task.priority}</p></td>

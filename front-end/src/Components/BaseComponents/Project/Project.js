@@ -7,6 +7,12 @@ import RemoveIcon from '@material-ui/icons/Remove';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import {Link} from 'react-router-dom'
 function Project({ name , description , start_date , end_date , _id , image }) {
+    
+    const setProject = () => {
+        localStorage.removeItem("running_project")
+        localStorage.setItem("running_project" , _id)
+    }
+    
     return (
         <div className="project">
             <div className="project__container_image">
@@ -31,7 +37,7 @@ function Project({ name , description , start_date , end_date , _id , image }) {
                 </Link>
                 
                 <a href="projectdetails">
-                    <button className="view" onClick={() => localStorage.setItem("running_project" , _id)}><VisibilityIcon /></button>
+                    <button className="view" onClick={() => setProject()}><VisibilityIcon /></button>
                 </a>
                 
             </div>

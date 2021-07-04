@@ -4,6 +4,10 @@ import bodyParser from 'body-parser'
 import connectToTheDatabase from './config/Database.js'
 import mongoose from 'mongoose'
 import path from 'path'
+
+import dotenv from 'dotenv'
+
+dotenv.config({ path : "../config.env" })
 // importing the API
 
 import AllApi from './API/index.js'
@@ -56,14 +60,19 @@ connectToTheDatabase()
 
 // using the API's
 app.use("/" , AllApi)
+//console.log(process.env.PORT)
 
 /// Heroku config
 
 if(process.env.NODE_ENV === "production"){
-    app.use(express.static("front-end/build"))
+    app.use(express.static(path.join(__dirname ,"/front-end/build")))
 
     app.get("*" , (req , res) => {
-        res.sendFile(path.resolve(__dirname , "front-end" , "build" , "index.html"))
+        res.sendFile(path.join(__dirname , "front-end" , "build" , "index.html"))
+    })
+}else{
+    app.get('/' , (req , res) => {
+        res.send("Api running")
     })
 }
 

@@ -64,6 +64,33 @@ export const projectReducers = (state = { projects : [] } , actions) => {
                 loading : false ,
                 error : actions.payload 
             }
+
+            case ProjectConstants.REMOVE_TASK_LOADING:
+                return{
+                    ...state , 
+                    loading : true
+                }
+            case ProjectConstants.REMOVE_TASK_SUCCESS:
+                var newproject = []
+                var projects = state.projects
+                for(var i = 0 ; i < projects.length ; i++){
+                    if(projects[i]._id === actions.payload.project){
+                        for(var j = 0 ; j < projects[i].tasks.length ; j++){
+                            if(projects[i].tasks[j]._id === actions.payload.task){
+                                
+                                projects[i].tasks = 
+                                    projects[i].tasks.filter(task => (
+                                        task._id!==actions.payload.task
+                                    ))
+                            }
+                        }
+                    }
+                }
+                return{
+                    ...state , 
+                    loading : false , 
+                    projects : projects
+                }
         
         case ProjectConstants.UPDATE_PROJECT_DETAILS_LOADING:
              const updatedProject = state.projects.map((project , i) => (

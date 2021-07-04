@@ -44,9 +44,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+<<<<<<< HEAD
   } ,
   "optionalDependencies": {
     "fsevents": "^1.2.13"
+=======
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
+>>>>>>> 94cd7923fc4b5ed78391bd50d66b0f1b8bd2fd59
   }
   
 }
