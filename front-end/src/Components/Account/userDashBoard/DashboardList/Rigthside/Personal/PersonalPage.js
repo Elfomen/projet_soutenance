@@ -11,7 +11,7 @@ import AddIcon from '@material-ui/icons/Add';
 import CheckForm from './Sub_task_check'
 import { makeStyles } from '@material-ui/core/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import { Link } from 'react-router-dom'
+import { Link , useHistory } from 'react-router-dom'
 function PersonalPage() {
 
     const dispatch = useDispatch()
@@ -28,6 +28,8 @@ function PersonalPage() {
         name: "",
         completed: false
     })
+
+    const navigate = useHistory()
 
     const { project , loading , error } = useSelector(state => state.project)
     //const workingProject = [ project ]
@@ -131,6 +133,10 @@ function PersonalPage() {
         return percent
     }
 
+    const gotoChat = (link) => {
+        navigate.push(link)
+    }
+
     
 
     return (
@@ -169,7 +175,7 @@ function PersonalPage() {
                             <div className="chatgroup__details">
                                 <p>Our application contains a chat group where members of a project can join and discuss about a project</p>
                                 <p>Access the chat group from the link below:</p>
-                                <a href={`/chatgroup/${localStorage.getItem("user_working_project")}`}>Chat group</a>
+                                <Link onClick={() => gotoChat(`/chatgroup/${localStorage.getItem("user_working_project")}`)}>Chat group</Link>
                                 <p>Make sure you respect the rules of the administrator on the tasks asign to you.</p>
                                 <p>You wont be able to participate to a project if an administrator knocks you out.</p>
                             </div>

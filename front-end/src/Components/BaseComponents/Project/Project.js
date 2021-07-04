@@ -36,9 +36,9 @@ function Project({ name , description , start_date , end_date , _id , image }) {
                     <button className="update"><GetAppIcon /></button>
                 </Link>
                 
-                <a href="projectdetails">
+                <Link to="/projectdetails">
                     <button className="view" onClick={() => setProject()}><VisibilityIcon /></button>
-                </a>
+                </Link>
                 
             </div>
             
